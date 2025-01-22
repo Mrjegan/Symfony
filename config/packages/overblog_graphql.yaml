@@ -1,0 +1,7 @@
+# config/packages/overblog_graphql.yaml
+overblog_graphql:
+    definitions:
+        schema:
+            query: App\GraphQL\Query\Query
+            mutation: App\GraphQL\Mutation\Mutation
+    security: ~  # This disables security by setting it to null (the default behavior)

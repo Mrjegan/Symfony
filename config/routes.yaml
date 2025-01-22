@@ -1,0 +1,37 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+api_login_check:
+    path: /api/login_check
+    controller: Lexik\JWTAuthenticationBundle\Controller\AuthenticationController::login
+
+api_create_product:
+    path: /api/products
+    controller: App\Controller\ProductController::create
+    methods: POST
+
+api_get_products:
+    path: /api/products
+    controller: App\Controller\ProductController::getAll
+    methods: GET
+
+api_get_product:
+    path: /api/products/{id}
+    controller: App\Controller\ProductController::get
+    methods: GET
+
+api_update_product:
+    path: /api/products/{id}
+    controller: App\Controller\ProductController::update
+    methods: PUT
+
+api_delete_product:
+    path: /api/products/{id}
+    controller: App\Controller\ProductController::delete
+    methods: DELETE
+
+overblog_graphql:
+    resource: 'routes/overblog_graphql.yaml'

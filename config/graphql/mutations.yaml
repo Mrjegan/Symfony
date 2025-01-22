@@ -1,0 +1,22 @@
+createProduct:
+    type: "Product"
+    arguments:
+        name: "String!"
+        description: "String!"
+        price: "Float!"
+    resolve: "@App\\GraphQL\\Mutation\\ProductMutation::createProduct"
+
+updateProduct:
+    type: "Product"
+    arguments:
+        id: "ID!"
+        name: "String"
+        description: "String"
+        price: "Float"
+    resolve: "@App\\GraphQL\\Mutation\\ProductMutation::updateProduct"
+
+deleteProduct:
+    type: "String"
+    arguments:
+        id: "ID!"
+    resolve: "@App\\GraphQL\\Mutation\\ProductMutation::deleteProduct"

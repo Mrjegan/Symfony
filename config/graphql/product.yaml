@@ -1,0 +1,54 @@
+types:
+    Product:
+        type: object
+        config:
+            fields:
+                id:
+                    type: "ID!"
+                name:
+                    type: "String!"
+                description:
+                    type: "String!"
+                price:
+                    type: "Float!"
+
+    Query:
+        type: object
+        config:
+            fields:
+                getAllProducts:
+                    type: "[Product]"
+                    resolve: "@=resolver('App\\GraphQL\\Query\\ProductQuery::getAll')"
+
+    Mutation:
+        type: object
+        config:
+            fields:
+                createProduct:
+                    type: "Product"
+                    args:
+                        name:
+                            type: "String!"
+                        description:
+                            type: "String!"
+                        price:
+                            type: "Float!"
+                    resolve: "@=resolver('App\\GraphQL\\Mutation\\ProductMutation::createProduct')"
+                updateProduct:
+                    type: "Product"
+                    args:
+                        id:
+                            type: "ID!"
+                        name:
+                            type: "String!"
+                        description:
+                            type: "String!"
+                        price:
+                            type: "Float!"
+                    resolve: "@=resolver('App\\GraphQL\\Mutation\\ProductMutation::updateProduct')"
+                deleteProduct:
+                    type: "String"
+                    args:
+                        id:
+                            type: "ID!"
+                    resolve: "@=resolver('App\\GraphQL\\Mutation\\ProductMutation::deleteProduct')"
