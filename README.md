@@ -66,10 +66,3 @@ PUT /api/products/{id} updates a product.
     }
 
 DELETE /api/products/{id} deletes a product.
-
-GraphQL Implementation Note
------------------------------
-
-I attempted to implement GraphQL as part of this task. However, due to my limited knowledge of GraphQL and the minimal time available, I could not complete this feature.
-
-I am confident in my ability to learn and adapt quickly, and I am eager to enhance my skills in GraphQL. Given additional time, I am committed to implementing this functionality and ensuring its seamless integration into the application.
