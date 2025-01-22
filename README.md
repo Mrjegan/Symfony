@@ -35,7 +35,7 @@ POST /api/register register user.
     {
         "username": "TestApa1",
         "email": "TestApp1@123",
-        "roles": "TestApp",
+        "roles": ["TestApp"],
         "password": "Test@123"
     }
 
